@@ -1,0 +1,60 @@
+//---- configs ----
+@import 'config/variables';
+
+.content--hotels {
+    .container {
+        max-width: 1024px;
+    }
+    .map {
+        height: 400px;
+        width: 100%;
+    }
+
+    .content__controller {
+        margin-bottom: 30px;
+        margin-top: 20px;
+
+        .ui-slider {
+            border-radius: 25px;
+        }
+
+        .ui-slider-handle {
+            background-color: $c-theme;
+            border-radius: 100%;
+            border: none;
+            transition: all .3s;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $c-theme-dark;
+                transition: all .3s;
+            }
+
+            label {
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $c-theme;
+                padding: 4px 5px;
+                color: $c-white;
+                border-radius: 3px;
+                white-space: nowrap;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 10px 7.5px 0 7.5px;
+                    border-color: $c-theme transparent transparent transparent;
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}

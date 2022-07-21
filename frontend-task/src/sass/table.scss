@@ -1,0 +1,62 @@
+//---- configs ----
+@import 'config/variables';
+
+.content {
+    .form {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &__item {
+            padding: 0 5px;
+
+            &--button {
+                margin-top: 0;
+                button {
+                    width: 100%;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__table {
+        margin-top: 30px;
+        overflow: hidden;
+        overflow-x: auto;
+        
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 10px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: $c-theme;
+            transition: all .3s;
+            border-radius: 10px;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+            background: $c-theme-dark;
+            transition: all .3s;
+        }
+    }
+
+    .table, th, td {
+        border: 2px solid $c-theme;
+        border-collapse: collapse;
+    }
+
+    .table {
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+    }
+}
